@@ -4,8 +4,8 @@
   "description": "Node boilerplate for API server",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/server.js",
-    "start": "node bin/server",
+    "dev": "nodemon src/server",
+    "start": "node build/server",
     "test": "cross-env NODE_EVN=test jest",
     "build": "sucrase ./src -d ./build --transforms imports"
   },
