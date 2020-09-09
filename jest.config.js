@@ -21,7 +21,11 @@ module.exports = {
   collectCoverageFrom: ['app/**/*.js'],
 
   // The directory where Jest should output its coverage files
+<<<<<<< HEAD
   coverageDirectory: 'tests/coverage',
+=======
+  coverageDirectory: '__tests__/coverage',
+>>>>>>> feat/upload
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -139,7 +143,11 @@ module.exports = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
+<<<<<<< HEAD
   testMatch: ['**/tests/**/*.spec.js'],
+=======
+  testMatch: ['**/__tests__/**/*.spec.js'],
+>>>>>>> feat/upload
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [

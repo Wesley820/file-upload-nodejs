@@ -4,8 +4,15 @@
   "description": "Node boilerplate for API server",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "nodemon server.js",
     "test": "cross-env NODE_EVN=test jest"
+=======
+    "dev": "nodemon src/server.js",
+    "start": "node bin/server",
+    "test": "cross-env NODE_EVN=test jest",
+    "build": "sucrase ./src -d ./build --transforms imports"
+>>>>>>> feat/upload
   },
   "keywords": [
     "node-api",
@@ -15,19 +22,34 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+=======
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.23.0",
+>>>>>>> feat/upload
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^4.1.0",
+<<<<<<< HEAD
     "jsonwebtoken": "^8.5.1",
     "sequelize": "^6.3.5"
+=======
+    "mongoose": "^5.10.3",
+    "multer": "^1.4.2",
+    "multer-storage-cloudinary": "^4.0.0"
+>>>>>>> feat/upload
   },
   "devDependencies": {
     "@sucrase/jest-plugin": "^2.0.0",
     "@types/jest": "^26.0.13",
     "cross-env": "^7.0.2",
+<<<<<<< HEAD
+=======
+    "del": "^5.1.0",
+>>>>>>> feat/upload
     "eslint": "^7.8.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -38,7 +60,12 @@
     "jest": "^26.4.2",
     "nodemon": "^2.0.4",
     "prettier": "^2.1.1",
+<<<<<<< HEAD
     "sequelize-cli": "^6.2.0",
     "sucrase": "^3.15.0"
+=======
+    "sucrase": "^3.15.0",
+    "supertest": "^4.0.2"
+>>>>>>> feat/upload
   }
 }

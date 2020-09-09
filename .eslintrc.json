@@ -19,6 +19,10 @@
     "class-methods-use-this": "off",
     "no-param-reassign": "off",
     "camelcase": "off",
+<<<<<<< HEAD
+=======
+    "func-names": "off",
+>>>>>>> feat/upload
     "import/no-extraneous-dependencies": [
       "error",
       {
