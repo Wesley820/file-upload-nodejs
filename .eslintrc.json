@@ -19,10 +19,7 @@
     "class-methods-use-this": "off",
     "no-param-reassign": "off",
     "camelcase": "off",
-<<<<<<< HEAD
-=======
     "func-names": "off",
->>>>>>> feat/upload
     "import/no-extraneous-dependencies": [
       "error",
       {
@@ -30,5 +27,12 @@
       }
     ],
     "no-unused-vars": ["error", { "argsIgnorePattern": "next" }]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": {
+        "rootPathSuffix": "./src"
+      }
+    }
   }
 }

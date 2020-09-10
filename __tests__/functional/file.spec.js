@@ -3,8 +3,8 @@ import mongoose from 'mongoose';
 import del from 'del';
 import path from 'path';
 
-import factory from '../../src/database/factory';
-import app from '../../src/start/app';
+import app from '~/start/app';
+import factory from '../util/factory';
 import truncate from '../util/truncate';
 
 describe('File', () => {
