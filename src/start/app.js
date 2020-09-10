@@ -12,7 +12,6 @@
 */
 
 import './bootstrap';
-import 'regenerator-runtime/runtime.js';
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
