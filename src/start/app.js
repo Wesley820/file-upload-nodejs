@@ -12,17 +12,18 @@
 */
 
 import './bootstrap';
+import 'regenerator-runtime/runtime.js';
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
 import path from 'path';
 
-import corsConfig from '../config/cors';
-import bodyConfig from '../config/bodyParser';
+import corsConfig from '~/config/cors';
+import bodyConfig from '~/config/bodyParser';
 
 import routes from './routes';
-import '../database';
+import '~/database';
 
 class App {
   constructor() {

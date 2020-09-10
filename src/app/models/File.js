@@ -3,7 +3,7 @@ import fs from 'fs';
 import { promisify } from 'util';
 import path from 'path';
 import cloudinary from 'cloudinary';
-import cloudinaryConfig from '../../config/cloudinary';
+import cloudinaryConfig from '~/config/cloudinary';
 
 cloudinary.v2.config(cloudinaryConfig);
 

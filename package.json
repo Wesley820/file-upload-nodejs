@@ -4,10 +4,10 @@
   "description": "Node boilerplate for API server",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/server",
+    "dev": "nodemon --exec babel-node src/server",
     "start": "node build/server",
     "test": "cross-env NODE_EVN=test jest",
-    "build": "sucrase ./src -d ./build --transforms imports"
+    "build": "babel ./src -d ./build"
   },
   "keywords": [
     "node-api",
@@ -28,8 +28,13 @@
     "multer-storage-cloudinary": "^4.0.0"
   },
   "devDependencies": {
-    "@sucrase/jest-plugin": "^2.0.0",
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
     "@types/jest": "^26.0.13",
+    "babel-jest": "^26.3.0",
+    "babel-plugin-root-import": "^6.5.0",
     "cross-env": "^7.0.2",
     "del": "^5.1.0",
     "eslint": "^7.8.1",
@@ -42,6 +47,7 @@
     "jest": "^26.4.2",
     "nodemon": "^2.0.4",
     "prettier": "^2.1.1",
+    "regenerator-runtime": "^0.13.7",
     "sucrase": "^3.15.0",
     "supertest": "^4.0.2"
   }

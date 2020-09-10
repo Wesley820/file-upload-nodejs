@@ -11,7 +11,7 @@
 import { factory } from 'factory-girl';
 import faker from 'faker';
 
-import File from '../app/models/File';
+import File from '~/app/models/File';
 
 factory.define('File', File, {
   name: faker.system.fileName(),
