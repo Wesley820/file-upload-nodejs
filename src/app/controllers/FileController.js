@@ -1,4 +1,4 @@
-import File from '~/app/models/File';
+import File from '@app/models/File';
 
 class FileController {
   async store(request, response) {

@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import del from 'del';
 import path from 'path';
 
-import app from '~/start/app';
+import app from '@start/app';
 import factory from '../util/factory';
 import truncate from '../util/truncate';
 
