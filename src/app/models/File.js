@@ -8,10 +8,22 @@ import cloudinaryConfig from '@config/cloudinary';
 cloudinary.v2.config(cloudinaryConfig);
 
 const FileSchema = new mongoose.Schema({
-  name: String,
-  size: Number,
-  key: String,
-  url: String,
+  name: {
+    type: String,
+    required: true,
+  },
+  size: {
+    type: Number,
+    required: true,
+  },
+  key: {
+    type: String,
+    required: true,
+  },
+  url: {
+    type: String,
+    required: true,
+  },
   created_at: {
     type: Date,
     default: Date.now,
@@ -31,7 +43,7 @@ FileSchema.pre('remove', function () {
 
   if (process.env.NODE_ENV === 'development') {
     promisify(fs.unlink)(
-      path.resolve(__dirname, '..', '..', 'tmp', 'uploads', this.key),
+      path.resolve(__dirname, '..', '..', '..', 'tmp', 'uploads', this.key),
     );
   }
 });
