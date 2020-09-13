@@ -18,6 +18,11 @@ class FileController {
     return response.status(201).json(file);
   }
 
+  async index(request, response) {
+    const images = await File.find().sort('-created_at');
+    return response.json(images);
+  }
+
   async delete(request, response) {
     const { id } = request.params;
     const file = await File.findById(id);
