@@ -12,7 +12,7 @@ routes.get('/', async (request, response) => {
 });
 
 routes.post('/files', upload.single('file'), FileController.store);
-routes.get('/files', FileController.index);
+routes.get('/images', FileController.index);
 routes.delete('/files/:id', FileController.delete);
 
 export default routes;

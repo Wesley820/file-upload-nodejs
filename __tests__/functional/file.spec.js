@@ -10,7 +10,11 @@ import truncate from '../util/truncate';
 describe('File', () => {
   afterAll((done) => {
     mongoose.connection.close();
-    del([path.resolve(__dirname, '..', '..', 'tmp', 'uploads', '*')]);
+    del([
+      path.resolve(__dirname, '..', '..', 'tmp', 'uploads', '*'),
+      '!.gitkeep',
+    ]);
+
     done();
   });
 
@@ -67,6 +71,15 @@ describe('File', () => {
   test('should error 400 when sending request without image', async () => {
     const response = await request(app).post('/files');
     expect(response.status).toEqual(400);
+  });
+
+  // Test Index method
+  test('should return a database record list successfully', async () => {
+    await factory.createMany('File', 5);
+    const response = await request(app).get('/images');
+
+    expect(response.status).toEqual(200);
+    expect(response.body).toHaveLength(5);
   });
 
   // Test Delete method
