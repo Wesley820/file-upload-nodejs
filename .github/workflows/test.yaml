@@ -12,7 +12,8 @@ jobs:
         mongodb-version: [4.0, 4.2]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Init
+        uses: actions/checkout@v2
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -25,10 +26,10 @@ jobs:
           mongodb-version: ${{ matrix.mongodb-version }}
 
       - name: Install dependencies
-      - run: yarn
+        run: yarn
 
       - name: Test running
-      - run: yarn test
+        run: yarn test
         env:
           CI: true
 
