@@ -1,0 +1,61 @@
+{
+  "name": "upload-api-app",
+  "version": "0.11.0",
+  "description": "Simple image upload system",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --ignore ./__tests__ --exec babel-node src/server",
+    "start": "node build/server",
+    "test": "cross-env NODE_EVN=test jest",
+    "build:pre": "babel ./src -d ./build && node build/server",
+    "build": "babel ./src -d ./build"
+  },
+  "keywords": [
+    "node-api",
+    "boilerplate-node"
+  ],
+  "author": "Wesley Oliveira",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "@sentry/node": "^5.23.0",
+    "@sentry/tracing": "^5.23.0",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.23.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^4.1.0",
+    "mongoose": "^5.10.3",
+    "multer": "^1.4.2",
+    "multer-storage-cloudinary": "^4.0.0",
+    "youch": "^2.0.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@types/jest": "^26.0.13",
+    "babel-jest": "^26.3.0",
+    "babel-plugin-root-import": "^6.5.0",
+    "cross-env": "^7.0.2",
+    "del": "^5.1.0",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "factory-girl": "^5.0.4",
+    "faker": "^5.1.0",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.1",
+    "sucrase": "^3.15.0",
+    "supertest": "^4.0.2"
+  }
+}
