@@ -69,6 +69,15 @@ describe('File', () => {
     expect(response.status).toEqual(400);
   });
 
+  // Test Index method
+  test('should return a database record list successfully', async () => {
+    await factory.createMany('File', 5);
+    const response = await request(app).get('/images');
+
+    expect(response.status).toEqual(200);
+    expect(response.body).toHaveLength(5);
+  });
+
   // Test Delete method
   test('should delete a certain record from the database and delete its photo', async () => {
     const { _id: id } = await factory.create('File');

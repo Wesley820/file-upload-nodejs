@@ -4,7 +4,7 @@
   "description": "Simple image upload system",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node src/server",
+    "dev": "nodemon --ignore ./__tests__ --exec babel-node src/server",
     "start": "node build/server",
     "test": "cross-env NODE_EVN=test jest",
     "build:pre": "babel ./src -d ./build && node build/server",
