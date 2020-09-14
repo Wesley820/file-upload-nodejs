@@ -27,6 +27,8 @@ describe('File', () => {
         path.resolve(__dirname, '..', '..', 'tmp', 'tests', 'valid-file.jpg'),
       );
 
+    console.log(response);
+
     expect(response.status).toEqual(201);
     expect(response.body).toHaveProperty('_id');
   });
